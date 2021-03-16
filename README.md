@@ -111,15 +111,15 @@ pubkey == EdDSA(txHash, signature)
 ### Range check
 **Statement 7: range check**
 ```
-reserve0 <= (1 << 112)
-reserve1 <= (1 << 112)
-newReserve0 <= (1<< 112)
-newReserve1 <= (1 << 112)
-address0 <= (1 << 160)
-address1 <= (1 <<160)
-mask <= (1<< 224)
-sourceA.amount <= (1<< 239) // prevent overflow
-sourceB.amount <= (1<< 239) // prevent overflow
-outputA.amount <= (1<< 239) // prevent overflow
-outputB.amount <= (1<< 239) // prevent overflow
+reserve0 < (1 << 112)
+reserve1 < (1 << 112)
+newReserve0 < (1<< 112)
+newReserve1 < (1 << 112)
+address0 < (1 << 160)
+address1 < (1 <<160)
+mask < (1<< 224)
+sourceA.amount < (1<< 239) // prevent overflow
+sourceB.amount < (1<< 239) // prevent overflow
+outputA.amount < (1<< 239) // prevent overflow
+outputB.amount < (1<< 239) // prevent overflow
 ```
